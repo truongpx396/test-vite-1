@@ -6,6 +6,8 @@ import Register from '../pages/Register';
 import RegisterSC from '../pages/RegisterSC';
 import RegisterTCSS from '../pages/RegisterTCSS';
 import Employee from '../pages/Employee';
+import TSPage from '../pages/TSPage';
+import CSPage from '../pages/CSPage';
 import styles from './App.module.css';
 
 const App: React.FC = () => {
@@ -32,6 +34,12 @@ const App: React.FC = () => {
             <li className={styles.navItem}>
               <Link to="/employee" className={styles.navLink}>Employee</Link>
             </li>
+            <li className={styles.navItem}>
+              <Link to="/ts-page" className={styles.navLink}>TSPage</Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to="/cs-page" className={styles.navLink}>CSPage</Link>
+            </li>
           </ul>
         </nav>
 
@@ -42,6 +50,8 @@ const App: React.FC = () => {
           <Route path="/register-sc" element={<RegisterSC />} />
           <Route path="/register-tcss" element={<RegisterTCSS />} />
           <Route path="/employee" element={<Employee />} />
+          <Route path="/ts-page" element={<TSPage />} />
+          <Route path="/cs-page" element={<CSPage />} />
         </Routes>
       </div>
     </BrowserRouter>

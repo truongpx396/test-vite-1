@@ -1,0 +1,8 @@
+node_modules
+dist
+.vite
+.vite_cache
+.git
+.gitignore
+Dockerfile
+README.md
