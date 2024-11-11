@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Register from '../pages/Register';
 import RegisterSC from '../pages/RegisterSC';
+import RegisterTCSS from '../pages/RegisterTCSS';
 import Employee from '../pages/Employee';
 import styles from './App.module.css';
 
@@ -26,6 +27,9 @@ const App: React.FC = () => {
               <Link to="/register-sc" className={styles.navLink}>RegisterSC</Link>
             </li>
             <li className={styles.navItem}>
+              <Link to="/register-tcss" className={styles.navLink}>RegisterTCSS</Link>
+            </li>
+            <li className={styles.navItem}>
               <Link to="/employee" className={styles.navLink}>Employee</Link>
             </li>
           </ul>
@@ -36,6 +40,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
           <Route path="/register-sc" element={<RegisterSC />} />
+          <Route path="/register-tcss" element={<RegisterTCSS />} />
           <Route path="/employee" element={<Employee />} />
         </Routes>
       </div>
