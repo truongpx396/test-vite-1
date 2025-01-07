@@ -8,7 +8,11 @@ import RegisterTCSS from '../pages/RegisterTCSS';
 import Employee from '../pages/Employee';
 import TSPage from '../pages/TSPage';
 import CSPage from '../pages/CSPage';
+import TmpPage from '../pages/TmpPage';
+import ItemsPage from '../features/items'
 import styles from './App.module.css';
+
+const BASE_PATH = '/test-vite-1';
 
 const App: React.FC = () => {
   return (
@@ -17,41 +21,49 @@ const App: React.FC = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link to="/" className={styles.navLink}>Home</Link>
+              <Link to={`${BASE_PATH}/`} className={styles.navLink}>Home</Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/about" className={styles.navLink}>About</Link>
+              <Link to={`${BASE_PATH}/about`} className={styles.navLink}>About</Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/register" className={styles.navLink}>Register</Link>
+              <Link to={`${BASE_PATH}/register`} className={styles.navLink}>Register</Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/register-sc" className={styles.navLink}>RegisterSC</Link>
+              <Link to={`${BASE_PATH}/register-sc`} className={styles.navLink}>RegisterSC</Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/register-tcss" className={styles.navLink}>RegisterTCSS</Link>
+              <Link to={`${BASE_PATH}/register-tcss`} className={styles.navLink}>RegisterTCSS</Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/employee" className={styles.navLink}>Employee</Link>
+              <Link to={`${BASE_PATH}/employee`} className={styles.navLink}>Employee</Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/ts-page" className={styles.navLink}>TSPage</Link>
+              <Link to={`${BASE_PATH}/ts-page`} className={styles.navLink}>TSPage</Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/cs-page" className={styles.navLink}>CSPage</Link>
+              <Link to={`${BASE_PATH}/cs-page`} className={styles.navLink}>CSPage</Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to={`${BASE_PATH}/redux-page`} className={styles.navLink}>ReduxPage</Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to={`${BASE_PATH}/tmp-page`} className={styles.navLink}>TmpPage</Link>
             </li>
           </ul>
         </nav>
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/register-sc" element={<RegisterSC />} />
-          <Route path="/register-tcss" element={<RegisterTCSS />} />
-          <Route path="/employee" element={<Employee />} />
-          <Route path="/ts-page" element={<TSPage />} />
-          <Route path="/cs-page" element={<CSPage />} />
+          <Route path={`${BASE_PATH}/`} element={<Home />} />
+          <Route path={`${BASE_PATH}/about`} element={<About />} />
+          <Route path={`${BASE_PATH}/register`} element={<Register />} />
+          <Route path={`${BASE_PATH}/register-sc`} element={<RegisterSC />} />
+          <Route path={`${BASE_PATH}/register-tcss`} element={<RegisterTCSS />} />
+          <Route path={`${BASE_PATH}/employee`} element={<Employee />} />
+          <Route path={`${BASE_PATH}/ts-page`} element={<TSPage />} />
+          <Route path={`${BASE_PATH}/cs-page`} element={<CSPage />} />
+          <Route path={`${BASE_PATH}/redux-page`} element={<ItemsPage />} />
+          <Route path={`${BASE_PATH}/tmp-page`} element={<TmpPage />} />
         </Routes>
       </div>
     </BrowserRouter>

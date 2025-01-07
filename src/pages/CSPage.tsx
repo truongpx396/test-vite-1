@@ -12,7 +12,7 @@ const CSPage: React.FC = () => {
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>Flexbox</h2>
           <p className={styles.cardContent}>
-            Flexbox is a layout model that allows elements to align and distribute space within a container.
+            Flexbox allows elements to align and distribute space within a container.
           </p>
         </div>
         <div className={styles.card}>
@@ -24,13 +24,13 @@ const CSPage: React.FC = () => {
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>Animations</h2>
           <p className={styles.cardContent}>
-            CSS animations make it possible to animate transitions from one CSS style configuration to another.
+            CSS animations make it possible to animate transitions from one style to another.
           </p>
         </div>
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>Media Queries</h2>
           <p className={styles.cardContent}>
-            Media queries are useful when you want to modify your site or app depending on a device's general type.
+            Media queries are used to modify styles depending on device characteristics.
           </p>
         </div>
       </div>

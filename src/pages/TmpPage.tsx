@@ -70,7 +70,7 @@ const userReducer = (state: User[], action: UserAction): User[] => {
   }
 };
 
-const TSPage: React.FC = () => {
+const TmpPage: React.FC = () => {
   const [users, dispatch] = useReducer(userReducer, []); // Using useReducer for state management
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -205,4 +205,4 @@ const TSPage: React.FC = () => {
   );
 };
 
-export default TSPage;
+export default TmpPage;

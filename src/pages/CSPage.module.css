@@ -1,20 +1,44 @@
+/* CSS Variables for consistent theming */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+}
+
+/* Container for the main content */
 .container {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
+/* Title with CSS Variable and Pseudo-element */
 .title {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
+  position: relative;
+  z-index: 1;
 }
 
+/* Pseudo-element ::after: Adds a decorative emoji to the title. */
+.title::after {
+  content: "✨";
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Paragraph for introductory text */
 .paragraph {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  color: var(--text-color);
 }
 
+/* Grid container with Flexbox, For flexible layout and spacing. */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -22,24 +46,50 @@
   justify-content: center;
 }
 
+/* Card styling with hover effects and box shadow */
 .card {
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
   width: 200px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Hover Effects and Transitions: Smooth interaction on hover. */
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Card title styling */
 .cardTitle {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--primary-color);
 }
 
+/* Card content with transition and color change on hover */
 .cardContent {
   font-size: 1rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.cardContent:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
 }

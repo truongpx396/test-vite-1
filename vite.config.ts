@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/test-vite-1/', // Replace with your repository name
   plugins: [react()],
   server: {
-    port: 3000,
+    port: 3003,
   },
   build: {
     outDir: 'dist',
